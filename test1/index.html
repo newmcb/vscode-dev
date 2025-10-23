@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>간단한 검색 테이블</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="wrap">
+<h1>직원 목록</h1>
+<p class="sub">아래 검색창에 이름, 부서, 직급, 도시 등을 입력해 행을 필터링하세요. (대소문자 무시)</p>
+
+
+<div class="search-bar">
+<span class="search-icon" aria-hidden="true">🔎</span>
+<input id="q" class="search-input" type="search" placeholder="예: 개발, 김, Seoul, Manager…" aria-label="테이블 검색" autocomplete="off" />
+<button id="clear" class="clear-btn" title="지우기" aria-label="검색어 지우기">✕</button>
+</div>
+
+
+<div class="table-wrap" role="region" aria-label="검색 가능한 테이블" tabindex="0">
+<table id="people">
+<thead>
+<tr>
+<th>이름</th>
+<th>부서</th>
+<th>직급</th>
+<th>도시</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>김하늘</td><td>개발</td><td>Senior Engineer</td><td>Seoul</td></tr>
+<tr><td>박지민</td><td>디자인</td><td>Product Designer</td><td>Busan</td></tr>
+<tr><td>이도윤</td><td>개발</td><td>Frontend Engineer</td><td>Incheon</td></tr>
+<tr><td>최서연</td><td>마케팅</td><td>Manager</td><td>Daegu</td></tr>
+<tr><td>정민우</td><td>영업</td><td>Account Executive</td><td>Daejeon</td></tr>
+<tr><td>한유진</td><td>개발</td><td>Backend Engineer</td><td>Seoul</td></tr>
+<tr><td>서지후</td><td>운영</td><td>Ops Specialist</td><td>Ulsan</td></tr>
+<tr><td>오아린</td><td>인사</td><td>HRBP</td><td>Gwangju</td></tr>
+<tr><td>장현우</td><td>개발</td><td>DevOps</td><td>Sejong</td></tr>
+<tr><td>윤서아</td><td>재무</td><td>Analyst</td><td>Seoul</td></tr>
+</tbody>
+<tfoot>
+<tr><td colspan="4"><span id="count">10</span>건 표시 중</td></tr>
+</tfoot>
+</table>
+</div>
+
+
+<div class="status" id="status">검색어 없음: 전체 10건</div>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
